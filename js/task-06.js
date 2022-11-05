@@ -2,10 +2,13 @@ const refs = {
   inputText: document.querySelector("#validation-input"),
 };
 function OnInputBlur(event) {
-  console.log(event.currentTarget.value.length);
-  event.currentTarget.value.length === attribute
-    ? refs.inputText.classList.add("valid")
-    : refs.inputText.classList.add("invalid");
+  if (event.currentTarget.value.length === attribute) {
+    refs.inputText.classList.remove("invalid");
+    refs.inputText.classList.add("valid");
+  } else {
+    refs.inputText.classList.remove("valid");
+    refs.inputText.classList.add("invalid");
+  }
 }
 
 refs.inputText.addEventListener("blur", OnInputBlur);
