@@ -13,7 +13,7 @@ console.log(refs.span);
 function colorСhange(event) {
   const randomColor = getRandomHexColor();
   refs.body.style.backgroundColor = randomColor;
-  refs.span = randomColor;
+  refs.span.textContent = randomColor;
   console.log(refs.span);
 }
 
